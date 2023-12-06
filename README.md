@@ -42,7 +42,7 @@ python database.py
 python populate.py
 ```
 
-## Calculando rank de delegacias por município:
+## Calculando rank de delegacias por quantidade de ocorrências:
 
 > Suponha que o Secretário de Estado de Polícia Civil te solicitou para apresentar um
 ranqueamento de todas as Delegacias de Polícia, localizadas na Capital, através da
@@ -52,7 +52,7 @@ quantidade de ocorrências
 python rank_delegacias.py
 ```
 
-## Calculando rank de delegacias por município:
+## Calculando rank de municipios por quantidade de ocorências relacionadas a roubo de veiculos:
 
 > Suponha que o Governador do Estado do RJ tenha te ligado e solicitado uma análise
 relacionada ao ranqueamento de todos os municípios, através da quantidade total de

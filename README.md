@@ -51,3 +51,13 @@ quantidade de ocorrências
 ```sh
 python rank_delegacias.py
 ```
+
+## Calculando rank de delegacias por município:
+
+> Suponha que o Governador do Estado do RJ tenha te ligado e solicitado uma análise
+relacionada ao ranqueamento de todos os municípios, através da quantidade total de
+ocorrências relacionadas a Roubo de Veículos
+
+```sh
+python rank_municipios.py
+```

@@ -14,13 +14,16 @@ query = sa.select(
     Ocorrencia.codDP == DP.codDP
 ).join(
     Municipio,
-    Ocorrencia.codIBGE == Municipio.codIBGE
+    Municipio.codIBGE == Ocorrencia.codIBGE
 ).where(
-    Municipio.regiao == 'Capital'
+    Municipio.regiao == 'Interior'
+).where(
+    Ocorrencia.ocorrencia == 'furto_veiculos' or
+    Ocorrencia.ocorrencia == 'roubo_veiculo'
 ).group_by(
     DP.nome
 ).order_by(
-    sa.func.sum(Ocorrencia.qtde).label('Total').desc()
+    sa.func.sum(Ocorrencia.qtde).desc()
 )
 
 result = session.execute(query)

@@ -1,9 +1,7 @@
 import sqlalchemy as sa
 from sqlalchemy.orm import sessionmaker
 
-from database import Base, DP, Municipio, Ocorrencia
-
-metadata = Base.metadata
+from database import Municipio, Ocorrencia
 
 engine = sa.create_engine('sqlite:///ocorrencias.db')
 session = sessionmaker(engine)()
@@ -24,7 +22,7 @@ query = sa.select(
 
 result = session.execute(query)
 
-print('  # | Municipio' + ' '*41 + ' |  qtde')
-print('-'*65)
+print('  # | Municipio' + ' '*41 + ' |  Total')
+print('-'*66)
 for i, (dp, c) in enumerate(result.fetchall(), start=1):
     print(f'{i:3} | {dp:50} | {c:6}')

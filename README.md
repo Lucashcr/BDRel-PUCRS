@@ -61,3 +61,14 @@ ocorrências relacionadas a Roubo de Veículos
 ```sh
 python rank_municipios.py
 ```
+
+## Calculando rank de municipios por quantidade de ocorências relacionadas a roubo e furto de veiculos no interior do estado de Rio de Janeiro:
+
+> Suponha que o Delegado da Delegacia de Roubos e Furtos de Veículos tenha te solicitado uma
+análise relacionada ao ranqueamento de todas as DPs, através da quantidade total de
+ocorrências relacionadas a Roubo e furto de Veículos, no Interior do Estado do RJ (é preciso
+verificar como o dado está cadastrado na tabela, para realizar o filtro!!!!).
+
+```sh
+python rank_DP_interior_RJ.py
+```

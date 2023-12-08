@@ -18,8 +18,10 @@ query = sa.select(
 ).where(
     Municipio.regiao == 'Interior'
 ).where(
-    Ocorrencia.ocorrencia == 'furto_veiculos' or
-    Ocorrencia.ocorrencia == 'roubo_veiculo'
+    sa.or_(
+        Ocorrencia.ocorrencia == 'furto_veiculos',
+        Ocorrencia.ocorrencia == 'roubo_veiculo'
+    )
 ).group_by(
     DP.nome
 ).order_by(
